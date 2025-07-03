@@ -9,7 +9,7 @@ from googleapiclient.discovery import build
 from google.auth.transport.requests import Request  # ✅ Added this import
 
 # Cohere Initialization
-co = cohere.Client("f94offoyreBTTwrJ8pJfCnXNSjEqiGUFrwM6ElFU")
+co = cohere.Client("*************************")  # Replace your Cohere API
 
 # Gmail API Scopes
 SCOPES = ['https://www.googleapis.com/auth/gmail.send']
@@ -39,7 +39,7 @@ def format_name_from_email(email):
 # Step 3: Generate email body using Cohere
 def generate_email_body(subject, recipient_email):
     name = format_name_from_email(recipient_email)
-    signature = "\n\nBest regards,\nShanmukha Nanda\nCEO\nMSN Solutions"
+    signature = "\n\nBest regards,\nShanmukha Nanda\nCEO\nMSN Solutions"     # Change regards of your info
 
     prompt = (
         f"Write a professional and sincere email to {name} with the subject: '{subject}'. "
